@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>PesoWise • Download APK</title>
+  <meta name="description" content="Download the PesoWise APK" />
+  <style>
+    :root{
+      --bg:#659b72;
+      --g1:#0ea059; /* green */
+      --g2:#219d61; /* lighter green */
+      --accent:#0b6b3a;
+      --card:#ffffff;
+      --muted:#6b7a72;
+      --radius:16px;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;background:linear-gradient(180deg,var(--bg),#ecfff0);min-height:100vh;display:flex;align-items:center;justify-content:center;padding:32px}
+    .container{width:100%;max-width:820px}
+    .card{background:linear-gradient(135deg,var(--card),#f8fff9);border-radius:var(--radius);box-shadow:0 10px 30px rgba(11,107,58,0.08);padding:28px;display:flex;gap:24px;align-items:center;position:relative}
+    .header-logo{position:absolute;top:16px;left:16px;width:64px;height:64px;border-radius:12px;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,var(--g1),var(--g2));color:white;font-weight:700;font-size:20px;box-shadow:0 6px 18px rgba(15,110,61,0.12)}
+    .left{flex:1;min-width:0;text-align:center}
+    .logo{width:92px;height:92px;border-radius:20px;display:none}
+    h1{margin:0;font-size:20px;color:#083826}
+    p{margin:8px 0 16px;color:var(--muted);line-height:1.45}
+    .meta{display:flex;gap:12px;flex-wrap:wrap;font-size:13px;color:var(--muted);justify-content:center}
+    .download{margin-top:22px;display:flex;justify-content:center}
+    .btn{display:inline-block;padding:14px 26px;border-radius:14px;background:linear-gradient(90deg,var(--g1),var(--g2));color:white;text-decoration:none;font-weight:700;box-shadow:0 10px 28px rgba(47,196,125,0.18)}
+    .btn.secondary{background:transparent;border:1px solid rgba(11,107,58,0.08);color:var(--accent);box-shadow:none;padding:10px 16px;margin-left:12px}
+    .right{width:220px;text-align:center}
+    .phone{width:160px;height:320px;border-radius:28px;background:linear-gradient(180deg,#fff, #f7fff7);box-shadow:0 10px 30px rgba(11,107,58,0.06);display:flex;align-items:center;justify-content:center;border:6px solid rgba(15,110,61,0.03);margin-left:14px}
+    .small{font-size:12px;color:var(--muted)}
+    .note{margin-top:14px;font-size:13px;color:var(--muted);text-align:center}
+    footer{margin-top:18px;text-align:center;color:var(--muted);font-size:13px}
+    @media (max-width:720px){.card{flex-direction:column;align-items:stretch;padding-top:56px}.right{width:100%;text-align:left;margin-top:12px}.phone{margin:0 auto}}
+    /* Advanced effects */
+  body{animation:fadeIn 0.8s ease-out}
+  @keyframes fadeIn{from{opacity:0;transform:scale(0.98)}to{opacity:1;transform:scale(1)}}
+  .card{transition:0.35s ease;backdrop-filter:blur(6px)}
+  .card:hover{transform:translateY(-4px);box-shadow:0 14px 36px rgba(11,107,58,0.15)}
+  .btn{transition:0.25s ease}
+  .btn:hover{transform:translateY(-2px);box-shadow:0 14px 30px rgba(47,196,125,0.25)}
+  .header-logo{transition:0.3s ease}
+  .header-logo:hover{transform:rotate(-6deg) scale(1.05)}
+</style>
+</head>
+<body>
+  <div class="container">
+    <div class="card" role="region" aria-label="PesoWise APK download card">
+      <div class="header-logo">
+  <img src="logo.png" style="width:100%;height:100%;border-radius:12px;">
+</div>
+
+      <div class="left">
+        <h1>PesoWise • APK Download</h1>
+        <p>Download the latest APK to install PesoWise on Android devices. Recommended for reviewers and testers.</p>
+        <div class="meta">
+          <div><strong>Version:</strong> 1.0.0</div>
+          <div><strong>Size:</strong> 27.0 MB</div>
+          <div><strong>Requires:</strong> Android 7+</div>
+        </div>
+        <div class="download">
+          <!-- Change the href to the actual path of your APK file on the server -->
+          <a class="btn" id="downloadBtn" href="pesowise.apk" download>Download APK</a>
+          <a class="btn secondary" href="#" onclick="copyLink();return false;">Copy Link</a>
+        </div>
+        <div class="note small">PesoWise <code>Thankyou!</code><code></code> for downloading.</div>
+      </div>
+
+      <div class="right">
+        <div class="phone">
+    <img src="ui_dashboard.jpg" 
+         style="width:120px;border-radius:12px;">
+</div>
+        <div style="margin-top:12px;text-align:center">
+          <div class="small">Safe install: Enable <strong>Unknown Sources</strong> or allow installs from this source in your device settings to install the APK.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    function copyLink(){
+      const link = location.origin + '/files/pesowise.apk';
+      navigator.clipboard?.writeText(link).then(()=>{
+        alert('Download link copied to clipboard:' + link);
+      }).catch(()=>{
+        prompt('Copy the link below:', link);
+      });
+    }
+  </script>
+</body>
+</html>
